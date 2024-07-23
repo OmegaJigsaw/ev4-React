@@ -30,6 +30,11 @@ const Agregar = () => {
     }
     listaObjetos.push(datosObjeto)
     localStorage.setItem("paises", JSON.stringify(listaObjetos))
+    setPais("")
+    setCapital("")
+    setIdioma("")
+    setPoblacion("")
+    setMoneda("")
   }
 
   return (

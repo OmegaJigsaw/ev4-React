@@ -22,49 +22,47 @@ const Inicio = () => {
         }
       });
   });
+
   return (
     <div className="container">
       <div className="row">
         <Router>
           {/* classname nav para vista horizontal de los elementos */}
-            <ul className="nav">
-              {/* lo mismo de arriba */}
-              <li className="nav-item ">
-                <Link className="nav-link active" to={"/"}>
-                  Inicio
-                </Link>
-              </li>
-              <li className="nav-item ">
-                <Link className="nav-link active" to={"/Agregar"}>
-                  Agregar
-                </Link>
-              </li>
-              <li className="nav-item ">
-                <Link className="nav-link active" to={"/Eliminar"}>
-                  Eliminar
-                </Link>
-              </li>
-              <li className="nav-item ">
-                <Link className="nav-link active" to={"/Actualizar"}>
-                  Actualizar
-                </Link>
-              </li>
-              <li className="nav-item ">
-                <Link className="nav-link active" to={"/Visualizar"}>
-                  Visualizar
-                </Link>
-              </li>
-            </ul>
-            {/* Rutas */}
+          <ul className="nav">
+            {/* lo mismo de arriba */}
+            <li className="nav-item ">
+              <Link className="nav-link active" to={"/Inicio"}>
+                Inicio
+              </Link>
+            </li>
+            <li className="nav-item ">
+              <Link className="nav-link active" to={"/Agregar"}>
+                Agregar
+              </Link>
+            </li>
+            <li className="nav-item ">
+              <Link className="nav-link active" to={"/Eliminar"}>
+                Eliminar
+              </Link>
+            </li>
+            <li className="nav-item ">
+              <Link className="nav-link active" to={"/Actualizar"}>
+                Actualizar
+              </Link>
+            </li>
+            <li className="nav-item ">
+              <Link className="nav-link active" to={"/Visualizar"}>
+                Visualizar
+              </Link>
+            </li>
+          </ul>
+          {/* Rutas */}
           <Routes>
-            <Route path="/" element={Inicio} />
+            <Route path="/Inicio" element={Inicio} />
             <Route path="/Agregar" element={<Agregar />} />
             <Route path="/Eliminar" element={<Eliminar />} />
             <Route path="/Actualizar" element={<Actualizar />} />
-            <Route
-              path="/Visualizar"
-              element={<Visualizar />}
-            />
+            <Route path="/Visualizar" element={<Visualizar />} />
           </Routes>
         </Router>
       </div>
